@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chess Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Chess Game</h1>
+  <div id="game-container">
+    <div id="chessboard"></div>
+    <div id="analysis-panel">
+      <h2>Game Analysis</h2>
+      <div id="analysis-content">
+        <p>Current Player: <span id="current-player">White</span></p>
+        <p>Moves Made: <span id="moves-made">0</span></p>
+        <p>Evaluation Score: <span id="eval-score">0</span></p>
+      </div>
+    </div>
+  </div>
+  <div id="game-status"></div>
+  <button id="restart-button" style="display:none;">Restart Game</button>
+  <script src="chess.js"></script>
+</body>
+</html>

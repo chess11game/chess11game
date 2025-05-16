@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chess Game</title>
+  <link rel="stylesheet" href="style-updated2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto Slab', serif;
+      background: linear-gradient(135deg, #e0eafc, #cfdef3);
+      margin: 0;
+      padding: 20px;
+      color: #2c3e50;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: #34495e;
+      text-shadow: 1px 1px 2px #bdc3c7;
+    }
+    header .chess-icon {
+      font-size: 3rem;
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #2980b9;
+    }
+    #game-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 40px;
+      max-width: 960px;
+      margin: 0 auto;
+      background: #f7f9fc;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    #chessboard {
+      border: 5px solid #2980b9;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      background-color: #f0d9b5;
+    }
+    #analysis-panel {
+      width: 320px;
+      background-color: #ecf0f1;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      font-size: 18px;
+      color: #34495e;
+    }
+    #analysis-panel h2 {
+      margin-top: 0;
+      color: #2980b9;
+      border-bottom: 3px solid #2980b9;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    #game-status {
+      text-align: center;
+      margin-top: 25px;
+      font-weight: 700;
+      font-size: 22px;
+      color: #c0392b;
+      min-height: 30px;
+    }
+    #restart-button {
+      display: block;
+      margin: 25px auto 0;
+      padding: 12px 30px;
+      font-size: 18px;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 12px rgba(39,174,96,0.4);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    #restart-button:hover {
+      background-color: #2ecc71;
+      box-shadow: 0 7px 15px rgba(46,204,113,0.6);
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="chess-icon">♞</div>
+    <h1>Chess Game</h1>
+  </header>
+  <div id="game-container">
+    <div id="chessboard"></div>
+    <div id="analysis-panel">
+      <h2>Game Analysis</h2>
+      <div id="analysis-content">
+        <p>Current Player: <span id="current-player">White</span></p>
+        <p>Moves Made: <span id="moves-made">0</span></p>
+        <p>Evaluation Score: <span id="eval-score">0</span></p>
+      </div>
+    </div>
+  </div>
+  <div id="game-status"></div>
+  <button id="restart-button" style="display:none;">Restart Game</button>
+  <footer>
+    &copy; 2024 Chess Game. All rights reserved.
+  </footer>
+  <script src="chess.js"></script>
+</body>
+</html>

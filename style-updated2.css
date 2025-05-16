@@ -1,0 +1,158 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 20px;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+#game-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#chessboard {
+  width: 480px;
+  height: 480px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  border: 3px solid #34495e;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  background-color: #f0d9b5;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.light {
+  background-color: #f0d9b5;
+}
+
+.dark {
+  background-color: #b58863;
+}
+
+.selected {
+  outline: 3px solid #e74c3c;
+  background-color: #f1948a !important;
+}
+
+#analysis-panel {
+  width: 300px;
+  background-color: #ecf0f1;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+#analysis-panel h2 {
+  margin-top: 0;
+  color: #2980b9;
+  border-bottom: 2px solid #2980b9;
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+#game-status {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #c0392b;
+}
+
+#restart-button {
+  display: block;
+  margin: 15px auto;
+  padding: 10px 25px;
+  font-size: 16px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+#restart-button:hover {
+  background-color: #2ecc71;
+}
+
+.excellent-move {
+  color: #27ae60;
+  font-weight: bold;
+  margin-left: 10px;
+  position: relative;
+}
+
+.excellent-move::before {
+  content: "⭐";
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
+
+.great-move {
+  color: #2980b9;
+  font-weight: bold;
+  margin-left: 10px;
+  position: relative;
+}
+
+.great-move::before {
+  content: "👍";
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
+
+.good-move {
+  color: #f39c12;
+  font-weight: bold;
+  margin-left: 10px;
+  position: relative;
+}
+
+.good-move::before {
+  content: "👌";
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
+
+.blunder-move {
+  color: #c0392b;
+  font-weight: bold;
+  margin-left: 10px;
+  position: relative;
+}
+
+.blunder-move::before {
+  content: "⚠️";
+  position: absolute;
+  left: -20px;
+  top: 0;
+}
